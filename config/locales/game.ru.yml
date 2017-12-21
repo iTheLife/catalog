@@ -1,0 +1,8 @@
+ru:
+  game:
+    model:
+      game: "Игра"
+    attributes:
+      game:
+        Title: "Название"
+        Text: "Описание"

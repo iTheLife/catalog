@@ -1,0 +1,23 @@
+<p>
+  <strong>Commenter:</strong>
+  <%= rating.commenter %>
+</p>
+
+<p>
+  <strong>Review:</strong>
+  <%= rating.review %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= rating.value %>
+</p>
+
+<p>
+  <button type="button" class="btn btn-danger">
+    <%= link_to 'Destroy Rating', [rating.game, rating],
+                method: :delete,
+                data: { confirm: 'Вы уверены?' } %>
+  </button>
+
+</p>

@@ -1,0 +1,35 @@
+<% provide(:title, 'Список игр') %>
+<h1>Список игр</h1>
+
+<table class="table">
+  <tr>
+    <th>Название игры</th>
+    <th>Описание игры</th>
+    <th></th>
+  </tr>
+
+  <% @games.each do |game| %>
+      <tr>
+        <td><%= game.title %></td>
+        <td><%= game.text %></td>
+        <td><button type="button" class="btn btn-warning">
+          <%= link_to 'Show', game_path(game) %>
+          </button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-warning">
+            <%= link_to 'Edit', edit_game_path(game) %>
+            </button></td>
+        <td>
+          <button type="button" class="btn btn-danger">
+            <%= link_to 'Destroy', game_path(game),
+                        method: :delete,
+                        data: { confirm: 'Вы точно хотите удалить игру?' } %>
+          </button>
+          </td>
+      </tr>
+  <% end %>
+</table>
+<button type="button" class="btn btn-success">
+<%=  link_to 'Новая игра', new_game_path  %>
+</button>

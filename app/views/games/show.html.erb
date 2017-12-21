@@ -1,0 +1,19 @@
+<% provide(:title, 'Список игр') %>
+<p>
+  <strong>Title:</strong>
+  <%= @game.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @game.text %>
+</p>
+
+<h2>Отзывы пользователей</h2>
+<%= render @game.ratings %>
+
+<h2>Оставьте свой отзыв и оценку:</h2>
+<%= render 'ratings/form' %>
+
+<%= link_to 'Изменить', edit_game_path(@game) %>
+<%= link_to 'Назад', games_path %>

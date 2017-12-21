@@ -1,0 +1,10 @@
+ru:
+  games:
+    new:
+      title: 'Новая игра'
+  shared:
+    header:
+      home: 'На главную'
+      help: 'Помощь'
+      game: 'Игры'
+      signin: 'Войти'

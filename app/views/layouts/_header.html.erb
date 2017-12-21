@@ -1,0 +1,19 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <%= link_to "sample app", '#', id: "logo" %>
+      <nav>
+        <ul class="nav nav-pills">
+          <li><%= link_to I18n.t('shared.header.home'),    root_path %></li>
+          <li><%= link_to I18n.t('shared.header.help'),    help_path %></li>
+          <li><%= link_to I18n.t('shared.header.game'), games_path %></li>
+          <li><%= link_to I18n.t('shared.header.signin'), '#' %></li>
+          <li><%= link_to 'rus', locale: :ru%></li>
+          <li><%= link_to 'en', locale: :en%></li>
+          <li><%=I18n.locale%></li>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
