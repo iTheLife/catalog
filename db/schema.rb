@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20171221035608) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "games", force: :cascade do |t|
     t.string "title"
     t.text "text"
@@ -23,7 +26,7 @@ ActiveRecord::Schema.define(version: 20171221035608) do
     t.string "commenter"
     t.text "review"
     t.integer "value"
-    t.integer "game_id"
+    t.bigint "game_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["game_id"], name: "index_ratings_on_game_id"
@@ -37,4 +40,5 @@ ActiveRecord::Schema.define(version: 20171221035608) do
     t.string "password_digest"
   end
 
+  add_foreign_key "ratings", "games"
 end
